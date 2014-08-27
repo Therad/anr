@@ -1,9 +1,7 @@
 package net.sandfur.anr.parser;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.Reader;
-import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,17 +14,17 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import net.sandfur.anr.card.Card;
+import net.sandfur.anr.card.util.CardPool;
+import net.sandfur.anrlib.deck.DeckParseException;
+import net.sandfur.anrlib.deck.DeckParser;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
-import net.sandfur.anr.card.Card;
-import net.sandfur.anr.card.util.CardPool;
-import net.sandfur.anrlib.deck.DeckParseException;
-import net.sandfur.anrlib.deck.DeckParser;
 
 public class OctgnDeckParser implements DeckParser {
 	CardPool cardPool;
